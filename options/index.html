@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protocoler options</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Use style:</td>
+            <td>
+                <label for="use_style_click">click</label>
+                <select id="use_style_click">
+                    <option value="0">left</option>
+                    <option value="1">middle</option>
+                    <option value="2">right</option>
+                </select> button and
+                <label for="use_style_mod">hold</label>
+                <select id="use_style_mod">
+                    <option value="">none</option>
+                    <option value="alt">alt</option>
+                    <option value="ctrl">ctrl</option>
+                    <option value="shift">shift</option>
+                    <option value="meta">meta</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rules:
+            </td>
+            <td>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Protocol</th>
+                            <th>Host match</th>
+                            <th>Path match</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rules"></tbody>
+                </table>
+
+                <table style="display: none;">
+                    <tr class="rule" id="rule_template">
+                        <td class="col-protocol">
+                            <input name="protocol" title="protocol" />
+                        </td>
+                        <td class="col-host-match">
+                            <input name="host" title="host match regex" />
+                        </td>
+                        <td class="col-path-match">
+                            <input name="path" title="path match regex" />
+                        </td>
+                    </tr>
+                </table>
+
+                <button id="add">+</button>
+            </td>
+        </tr>
+    </table>
+
+    <button id="save">Save</button>
+
+    <script src="../js/shared.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

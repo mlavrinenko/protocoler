@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+
+    "name": "Protocoler",
+    "description": "",
+    "version": "1.0",
+
+    "options_page": "options/index.html",
+
+    "content_scripts": [ {
+        "js":        [ "js/shared.js", "js/protocoler.js" ],
+        "matches":   [ "*://*/*"],
+        "run_at":    "document_start"
+    } ],
+
+    "icons": {
+        "16": "icon/16.png",
+        "48": "icon/48.png",
+        "128": "icon/128.png"
+    },
+
+    "permissions": [
+        "storage",
+        "activeTab"
+    ]
+}

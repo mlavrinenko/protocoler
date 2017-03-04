@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.rule .col-protocol {
+    width: 50px;
+}
+
+.rule input {
+    width: 100%;
+    box-sizing: border-box;
+}
